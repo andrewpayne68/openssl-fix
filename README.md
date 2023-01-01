@@ -9,9 +9,9 @@ To quickly enable it, find the directory that holds your OpenSSL config file or 
 ```
 openssl version -d
 ```
-You can now go to the directory and edit the config file (it may be necessary to use sudo):
+You can now go to the directory and edit the config file:
 ```
-nano openssl.cnf
+sudo nano openssl.cnf
 ```
 Make sure that the config file contains following lines:
 
