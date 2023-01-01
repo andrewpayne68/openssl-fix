@@ -1,10 +1,13 @@
-# openssl-fix
-Unsupported hash type ripemd160 with hashlib in Python
+# openssl fix for legacy crypto algorithms
+
+# Error
+Unsupported hash type ripemd160 with hashlib in Python Error:
 ```
 ValueError: unsupported hash type ripemd160
 ```
 Hashlib uses OpenSSL for ripemd160 and apparently OpenSSL disabled some older crypto algos around version 3.0 in November 2021. All the functions are still there but require manual enabling. See issue 16994 of OpenSSL github project for details. https://github.com/openssl/openssl/issues/16994
 
+# Fix
 To quickly enable it, find the directory that holds your OpenSSL config file or a symlink to it, by running the below command:
 ```
 openssl version -d
